@@ -37,8 +37,9 @@ int main()
 	printf("==================\n");
    	printSubtree(root);
 	printf("Number of nodes=%d\n", countNodes(root));
+	printf("Running free subtree\n");
 	root=freeSubtree(root);
-	printf("Number of nodes=%d\n", countNodes(root));
+
 
 	return 0;
 }

@@ -7,7 +7,7 @@
 Node* insertNode(Node *root, int value){ 
     // check for the empty tree. 
     if(root == NULL){
-        root = (Node*) malloc(sizeof(root));
+        root = (Node*) malloc(sizeof(Node));
         if(root == NULL){
             printf("Allocation unsuccessful\n");
             return NULL;
@@ -92,10 +92,11 @@ Node* freeSubtree(Node* N){
     // Start from bottom of the tree and go up. 
     if(N == NULL){ // If tree is empty. 
         return N;
-    }    
-    return freeSubtree(N->left);
-    return freeSubtree(N->right);
+    } 
+    freeSubtree(N->left);
+    freeSubtree(N->right);
     free(N);
-    
+    printf("Node has been freed\n");
+
     return N;
 }
