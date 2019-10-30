@@ -24,16 +24,12 @@ int main()
 	printf("ROOT DATA IS %d\n\n", root->data);
 	root = deleteNode(root, 14);
 	printf("ROOT DATA IS %d\n\n", root->data);
-	root = deleteNode(root, 6);
-	printf("ROOT DATA IS %d\n\n", root->data);
-	root = deleteNode(root, 17);
-	//printf("ROOT DATA IS %d\n\n", root->data);
 	printf("END OF DELETION\n");
 	printf("==================\n");
-	//printSubtree(root);
+	printSubtree(root);
 	printf("Number of nodes=%d\n", countNodes(root));
 	printf("Running free subtree\n");
-	//root = freeSubtree(root);
+	root = freeSubtree(root);
 	printf("Number of nodes=%d\n", countNodes(root));
 
 	return 0;
