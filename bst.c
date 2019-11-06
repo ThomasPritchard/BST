@@ -2,8 +2,6 @@
 #include <stdlib.h>
 #include "bst.h"
 
-// Your source code
-
 Node *insertNode(Node *root, int value)
 {
     // check for the empty tree.
@@ -131,6 +129,7 @@ Node *balanceTree(Node *root)
     // Next, we recursively add the items back into the tree.
     root = reAdd(root, treeArray, 0, treeSize - 1);
 
+	free(treeArray);
     return root;
 }
 
